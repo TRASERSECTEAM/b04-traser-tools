@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://trasersecteam.my.id/assets/logo.png" width="140" alt="TraserSec Logo">
+  <img src="https://files.catbox.moe/benwpf.png" width="140" alt="TraserSec Logo">
 </p>
 
 ---
@@ -17,7 +17,7 @@
 
 - ✅ Tampilan hacker-style terminal
 - ✅ Efek loading real-time
-- ✅ Simulasi doxing profesional (masukkan nomor target)
+- ✅ doxing profesional (masukkan nomor target)
 - ✅ Informasi publikasi IP korban secara otomatis
 - ✅ Redirect ke website setelah proses selesai
 - ✅ Dirancang full otomatis untuk Termux
@@ -36,7 +36,12 @@ Jalankan langsung di Termux:
 
 ```bash
 pkg install git -y
-git clone https://github.com/b04-traser-tools
-cd meta-osint
-chmod +x x.sh
-./x.sh
+git clone https://github.com/TRASERSECTEAM/b04-traser-tools.git
+cd b04-traser-tools
+pkg update -y
+pkg upgrade -y
+pkg install -y nodejs termux-api
+termux-setup-storage
+npm init -y >/dev/null 2>&1
+npm install axios chalk form-data
+node B04.js
