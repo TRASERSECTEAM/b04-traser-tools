@@ -1,5 +1,5 @@
 <h1 align="center">
-  ⚡ META-OSINT v4 ⚡
+  ⚡ META-OSINT B04 v4 ⚡
 </h1>
 
 <p align="center">
@@ -36,7 +36,7 @@ Jalankan langsung di Termux:
 
 ```bash
 pkg install git -y
-git clone https://github.com/trasersecteam/b04-traser-tools
+git clone https://github.com/b04-traser-tools
 cd meta-osint
 chmod +x x.sh
 ./x.sh
